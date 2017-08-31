@@ -78,6 +78,7 @@ theme: spfk
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repository: https://github.com/noney/noney.github.io.git
-  coding: https://git.coding.net/noney/noney.git
+  repository: 
+            github: https://github.com/noney/noney.github.io.git
+            coding: https://git.coding.net/noney/noney.git
   branch: master
