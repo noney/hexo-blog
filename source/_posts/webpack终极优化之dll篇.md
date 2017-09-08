@@ -7,11 +7,11 @@ tags:
 ---
 
 [bingoo]: https://github.com/noney/bingoo "基于webpack3的vue2构建工具"
-[noney li]: https://github.com/noney/ "noneyli"
+[Noney Li]: https://github.com/noney/ "noneyli"
 
 *—— 同时发表于[coding](http://noney.coding.me/noney/2017/09/01/webpack终极优化之dll篇/)*
 
-__作者：[noney li]__
+__作者：[Noney Li]__
 
 #### 写在前面
 最近webpack很火，并且确实很好用，但是入手并不是很容易，过程中会遇到很多的坑，今天和大家踩的坑是关于第三方库的。在我们构建前端项目的时间，使用到第三方库的几率非常大，因为我们不需要自己造轮子，而且当前前端生态圈如此火热，涌现出一大批优秀的库和库架，如react、angular、vue 、jquery等。
