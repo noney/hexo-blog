@@ -8,7 +8,7 @@ tags:
 
 [Dragon Wang]: https://github.com/wanghantong/ "wanghantong"
 
-*—— 同时发表于[coding](http://noney.coding.me/noney/2017/09/08/Jmeter-Performance-Test-Chapter-one/)*
+*—— 同时发表于[coding](http://noney.coding.me/)*
 
 __作者：[Dragon Wang]__
 
