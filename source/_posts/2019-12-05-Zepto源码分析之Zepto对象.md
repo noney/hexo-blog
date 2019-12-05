@@ -253,8 +253,8 @@ zepto.init = function(selector, context) {
 | **数组** | 过滤掉undefined和null | `$(<DOM nodes>)`  |
 | **对象** | 包裹为数组 | `$(<DOM nodes>)`  |
 | **其它情况** html片段| 调用zepto.fragment，返回元素实例数组 | 异步返回html片段  |
-| **其它情况** context存在| 创建实例并且执行find | |
-| **其它情况** css选择器| 调用zepto.qsa获取元素数组实例 | |
+| **其它情况** context存在| 创建实例并且执行find | &nbsp; |
+| **其它情况** css选择器| 调用zepto.qsa获取元素数组实例 | &nbsp; |
 
 #### 参考
 [读Zepto源码之神奇的$](https://github.com/yeyuqiudeng/reading-zepto/blob/master/src/%E8%AF%BBZepto%E6%BA%90%E7%A0%81%E4%B9%8B%E7%A5%9E%E5%A5%87%E7%9A%84%24.md)
