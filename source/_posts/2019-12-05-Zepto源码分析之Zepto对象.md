@@ -167,7 +167,7 @@ zepto.Z = function(dom, selector) {
 ```
 /**
  * [isZ 是否为zepto.Z实例]
- * @param  {[object]}  object [实例对象]
+ * @param  {[object]}  object [元素集合]
  * @return {Boolean}        [description]
  */
 zepto.isZ = function(object) {
