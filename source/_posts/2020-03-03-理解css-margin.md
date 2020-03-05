@@ -34,6 +34,8 @@ margin是盒模型中的外边框。
 </div>
 ```
 
+<!-- more -->
+
 ```css
 .box {
     width: 500px;
