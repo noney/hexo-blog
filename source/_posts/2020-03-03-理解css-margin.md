@@ -546,3 +546,8 @@ img {
 
 - 当文档流变化时，margin-start会根据变化设置不同margin开始的位置
 - 当文档流变化时，margin-end会根据变化设置不同margin结束的位置
+
+#### 参考
+
+[CSS深入理解之margin](https://www.imooc.com/learn/680)
+
