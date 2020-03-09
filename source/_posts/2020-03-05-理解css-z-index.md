@@ -39,7 +39,7 @@ z-index表示元素的层叠顺序。
 - 后来者居上
 - 哪个z-index值大，哪个在上面
 
-嵌套情况
+*嵌套情况*
 
 - 祖先优先原则，前提是z-index的值是数值，非auto
 
@@ -60,7 +60,7 @@ z-index表示元素的层叠顺序。
 
 *7阶层叠水平*
 
-- 层叠上下文background/order
+- 层叠上下文background/border
 - 负z-index
 - block块状水平盒子
 - float浮动盒子
@@ -109,7 +109,7 @@ img {
 
 
 
-- Z-index层叠顺序受限于层叠上下文
+- z-index层叠顺序受限于层叠上下文
 
 ```html
 <div class="box1">
