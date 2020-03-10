@@ -9,7 +9,7 @@ tags:
 [bingoo]: https://github.com/noney/bingoo "基于webpack3的vue2构建工具"
 [Noney Li]: https://github.com/noney/ "noneyli"
 
-*—— 同时发表于[coding](http://noney.coding.me/noney/2017/09/01/webpack终极优化之dll篇/)*
+*—— 同时发表于[coding](http://0kv30q.coding-pages.com/noney/2017/09/01/webpack终极优化之dll篇/)*
 
 __作者：[Noney Li]__
 

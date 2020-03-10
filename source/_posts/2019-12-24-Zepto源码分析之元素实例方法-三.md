@@ -8,7 +8,7 @@ tags:
 
 [Noney Li]: https://github.com/noney/ "noneyli"
 
-*—— 同时发表于[coding](http://noney.coding.me/)*
+*—— 同时发表于[coding](http://0kv30q.coding-pages.com/)*
 
 __作者：[Noney Li]__
 

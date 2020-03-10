@@ -103,7 +103,7 @@ deploy:
   type: git
   repository: 
     github: https://github.com/noney/noney.github.io.git
-    coding: https://git.coding.net/noney/noney.git
+    coding: https://e.coding.net/noneyli/blog/coding-demo.git
     branch: master
 
 sitemap:

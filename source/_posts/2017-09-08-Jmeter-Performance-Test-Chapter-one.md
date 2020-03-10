@@ -8,7 +8,7 @@ tags:
 
 [Dragon Wang]: https://github.com/wanghantong/ "wanghantong"
 
-*—— 同时发表于[coding](http://noney.coding.me/)*
+*—— 同时发表于[coding](http://0kv30q.coding-pages.com/)*
 
 __作者：[Dragon Wang]__
 
