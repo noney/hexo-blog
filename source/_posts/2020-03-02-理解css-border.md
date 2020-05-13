@@ -44,21 +44,31 @@ dotted 点线，有兼容性问题，区别如下：
 我们可以利用这个特性，在IE7、8上面实现圆角
 
 ```html
-<div class="parent">
-    <div class="child">dotted</div>
+<div>fdkfkdskf</div>
+<div class="warp">
+  <span>aaa</span>
+  <div class="bor"></div>
 </div>
+<div>fdkfkdskf</div>
 ```
 
 ```css
-.parent {
-    width: 150px;
-    height: 150px;
-    overflow: hidden;
+.warp {
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  overflow: hidden;
+  color: #fff;
 }
-.child {
-    width: 100%;
-    height: 100%;
-    border: 149px dotted red;
+.warp span {
+  position: absolute;
+  width: 70px;
+  text-align: center;
+}
+.bor {
+  height: 100%;
+  width: 100%;
+  border: 69px dotted blue;
 }
 ```
 
@@ -70,16 +80,47 @@ double 双实线，兼容性非常好，根据它的等分原则，我们可以�
 
 ```css
 .double {
-    width: 120px;
-    height: 20px;
-    border-top: 60px double;
-    border-bottom: 20px solid;
+  width: 120px;
+  height: 20px;
+  border-top: 60px double;
+  border-bottom: 20px solid;
 }
 ```
 
 #### border-color与color
 
 border-color的默认颜色就是color，当我们没有指定边框颜色的时候，它会使用color属性的值作为颜色值。
+
+```html
+<a href="#" class="add"></a>
+```
+
+```css
+.add {
+  border: 1px solid;
+  color: #999;
+  padding: 25px 15px;
+  display: inline-block;
+}
+.add::before {
+  content: '';
+  border-top: 10px solid;
+  display: inline-block;
+  padding: 0 25px;
+  }
+.add::after {
+  content: '';
+  border-left: 10px solid;
+  display: inline-block;
+  padding: 25px 0;
+  position: absolute;
+  margin-top: -14px;
+  margin-left: -30px;
+}
+.add:hover {
+  color: blue;
+}
+```
 
 #### border与background定位
 
@@ -94,49 +135,44 @@ border-color的默认颜色就是color，当我们没有指定边框颜色的时
 ```
 
 ```css
-        .triangle {
-            width: 0;
-            height: 0;
-            border: 20px solid red;
-            border-color: red transparent transparent transparent;
-        }
+.triangle {
+    width: 0;
+    height: 0;
+    border: 20px solid red;
+    border-color: red transparent transparent transparent;
+}
 ```
 
 模拟圆角
 
 ```html
-<span class="circle-btn">button</span>
+<a href="###" class="circle"><span>点我啊点我啊点</span></a>
 ```
 
 ```css
-        .circle-btn {
-            padding: 15px 50px;
-            color: #fff;
-            background-color: blue;
-            display: inline-block;
-            margin: 20px;
-            position: relative;
-        }
-        .circle-btn::before {
-            content: "";
-            display: inline-block;
-            border: 3px solid;
-            border-color: transparent transparent blue transparent;
-            width: 96%;
-            position: absolute;
-            top: -6px;
-            left: 0;
-        }
-        .circle-btn::after {
-            content: "";
-            display: inline-block;
-            border: 3px solid;
-            border-color: blue transparent transparent transparent;
-            width: 96%;
-            position: absolute;
-            bottom: -6px;
-            left: 0;
-        }
+.circle {
+  margin: 39px;
+  text-decoration: none;
+  display: inline-block;
+}
+.circle span {
+  display: block;
+  background-color: blue;
+  color: #fff;
+  padding: 10px 15px;
+}
+.circle::before {
+  content: "";
+  display: block;
+  border: 3px solid;
+  border-color: transparent transparent blue transparent;
+}
+.circle::after {
+  content: "";
+  display: block;
+  border: 3px solid;
+  border-color: blue transparent transparent transparent;
+}
 ```
 
 #### border与透明边框
@@ -150,14 +186,14 @@ border-color的默认颜色就是color，当我们没有指定边框颜色的时
 
 ```css
 .checkbox {
-    width: 16px;
-    height: 16px;
-    border: 2px solid transparent;
-    box-shadow: inset 0 1px, inset 1px 0, inset -1px 0, inset 0 -1px;
-    background-color: #fff;
-    background-clip: content-box;
-    color: #d0d0d5;
-    display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid transparent;
+  box-shadow: inset 0 1px, inset 1px 0, inset -1px 0, inset 0 -1px;
+  background-color: #fff;
+  background-clip: content-box;
+  color: #d0d0d5;
+  display: inline-block;
 }
 ```
 

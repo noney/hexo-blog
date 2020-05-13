@@ -419,31 +419,34 @@ img {
 如果容器没有设置宽度，margin正直可以使宽度变小，负值可以使宽度变大，float元素除外。
 
 ```html
-<div class="box">
-   <div class="ul">
-       <div class="li">aaa</div>
-       <div class="li">aaa</div>
-       <div class="li">aaa</div>
-   </div>
+<div class="list">
+    <ul>
+        <li>abc</li>
+        <li>abc</li>
+        <li>abc</li>
+    </ul>
 </div>
 ```
 
 ```css
-.box {
-    width: 1200px;
-    background-color: orange;
-    margin: auto;
-}
-.ul {
+.list {
+    width: 800px;
+    background-color: #000;
     overflow: hidden;
-    margin-right: -20px;
 }
-.li {
-    width: 386.66px;
-    height: 300px;
-    margin-right: 20px;
-    background-color: green;
+.list ul {
+    margin-right: -25px;
+}
+.list ul li {
     float: left;
+    background-color: blue;
+    width: 250px;
+    list-style: none;
+    height: 100px;
+    line-height: 100px;
+    color: white;
+    text-align: center;
+    margin-right: 25px;
 }
 ```
 

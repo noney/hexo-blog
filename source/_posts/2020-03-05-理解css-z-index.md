@@ -37,11 +37,119 @@ z-index表示元素的层叠顺序。
 *无嵌套情况*
 
 - 后来者居上
+
+```html
+<div class="top">
+    <span>aaaaaaaaaaaaa</span>
+</div>
+<div class="bottom">
+    <span>bbbbbbbbbbbbbbbb</span>
+</div>
+```
+
+```css
+div {
+    position: absolute;
+    width: 100px;
+    height: 200px;
+    background: #000;
+    color: #fff;
+}
+```
+
 - 哪个z-index值大，哪个在上面
+
+```html
+    <div class="top">
+    <span>aaaaaaaaaaaaa</span>
+</div>
+<div class="bottom">
+    <span>bbbbbbbbbbbbbbbb</span>
+</div>
+```
+
+```css
+div {
+    position: absolute;
+    width: 100px;
+    height: 200px;
+    background: #000;
+    color: #fff;
+}
+div.top {
+    z-index: 2;
+}
+div.bottom {
+    z-index: 1;
+}
+```
 
 *嵌套情况*
 
-- 祖先优先原则，前提是z-index的值是数值，非auto
+- 祖先优先原则，前提是z-index的值是数值，非auto（当值为auto时，不会创建层叠上下文，当前元素的z-index起作用）
+
+```html
+<div class="top">
+    <span>aaaaaaaaaaaaa</span>
+</div>
+<div class="bottom">
+    <span>bbbbbbbbbbbbbbbb</span>
+</div>
+```
+
+```css
+div {
+    position: absolute;
+    width: 100px;
+    height: 200px;
+    background: #000;
+    color: #fff;
+    z-index: 1;
+}
+div span {
+    position: absolute;
+}
+div.top span {
+    z-index: 2;
+}
+div.bottom span {
+    z-index: 1;
+}
+```
+
+```html
+<div class="top">
+    <span>aaaaaaaaaaaaa</span>
+</div>
+<div class="bottom">
+    <span>bbbbbbbbbbbbbbbb</span>
+</div>
+```
+
+```css
+div {
+    position: absolute;
+    width: 100px;
+    height: 200px;
+    background: #000;
+    color: #fff;
+    z-index: 1;
+}
+div.top {
+    z-index: auto;
+}
+div span {
+    position: absolute;
+}
+div.top span {
+    z-index: 2;
+}
+div.bottom span {
+    z-index: 1;
+}
+```
+
+
 
 #### 层叠上下文和层叠基础
 
@@ -51,10 +159,14 @@ z-index表示元素的层叠顺序。
 - z-index值为数值的定位元素也具有层叠上下文
 - 其它属性
 
+**理解：** 一个元素具有定位属性同时它的`z-index`值为数字的时候，才会创建层叠上下文
+
 *层叠水平*
 
 - 决定了同一个层叠上下文中元素在Z轴上的显示顺序
 - 层叠水平不等于z-index，普通元素也有层叠水平
+
+**理解：** 层叠水平并不是层叠上下文，层叠水平决定的是层叠上下文内部的元素顺序
 
 #### 层叠顺序
 
@@ -86,7 +198,7 @@ z-index表示元素的层叠顺序。
 }
 ```
 
-- z-index值不为auto的定位元素会创建层叠上下文
+- z-index值不为auto的定位元素会创建层叠上下文（IE7浏览器，auto时也会创建层叠上下文）
 
 ```html
 <div class="box">
@@ -107,7 +219,29 @@ img {
 }
 ```
 
+**理解：** 当`box`元素没有`z-index`值时，其默认值为`auto`，此时它没有创建层叠上下文，所以`z-index:-1`的元素跑到了背景之下（此时图片的层叠上下文容器是页面的根元素，由于`z-index`受限于层叠上下文，所以对于图片来说`box`是一个普通的元素）。
 
+```html
+<div class="box">
+    <img src="test.jpg" alt="">
+</div>
+```
+
+```css
+body {
+    background-color: #000;
+}
+.box {
+    position: absolute;
+    background-color: blue;
+    /*z-index: 0;*/
+}
+img {
+    position: relative;
+    z-index: -1;
+    top: 100px;
+}
+```
 
 - z-index层叠顺序受限于层叠上下文
 
