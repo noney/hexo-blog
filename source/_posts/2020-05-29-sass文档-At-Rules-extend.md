@@ -185,7 +185,7 @@ $color: red;
 
 #### 限制
 
-只有简单的选择器才能被扩展，如`.info、a`，如果`.message.info`可以被扩展，那么`@extend`的定义表明，与扩展器匹配的元素将被设计成与`.message.info`匹配的样式。这和匹配`.message`和`.info`是一样的，所以可以用这个代替`@extend .message, .info。
+只有简单的选择器才能被扩展，如`.info、a`，如果`.message.info`可以被扩展，那么`@extend`的定义表明，与扩展器匹配的元素将被设计成与`.message.info`匹配的样式。这和匹配`.message`和`.info`是一样的，所以可以用这个代替`@extend .message, .info`。
 
 类似地，如果`.main .info`可以被扩展，它会做(几乎)与扩展`.info`相同的事情。细微的差别不值得让人觉得它在做一些本质上不同的事情，所以这也是不允许的。
 

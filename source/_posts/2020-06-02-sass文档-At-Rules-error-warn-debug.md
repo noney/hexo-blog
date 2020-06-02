@@ -2,10 +2,8 @@
 title: sass文档-At-Rules-error-warn-debug
 date: 2020-06-02 15:37:03
 tags:
-        - 日积月累
-        - css
-
-
+    - 日积月累
+    - css
 
 ---
 
@@ -136,7 +134,7 @@ Warning: Unknown prefix wekbit.
 style.scss:3 Debug: divider offset: 80px
 ```
 
-***注意：***您可以将任何值传递给`@debug`，而不仅仅是字符串!它打印该值的表示形式与`meta.inspect()`函数相同
+***注意：***您可以将任何值传递给`@debug`，而不仅仅是字符串!它打印该值的表示形式与`meta.inspect()`函数相同。
 
 
 
