@@ -26,6 +26,7 @@ __作者：[Noney Li]__
 @debug string.unquote(".widget:hover"); // .widget:hover
 @debug string.quote(bold); // "bold"
 ```
+<!-- more -->
 
 #### 转义
 
@@ -38,6 +39,7 @@ __作者：[Noney Li]__
 @debug "line1\a line2"; // "line1\a line2"
 @debug "Nat + Liz \1F46D"; // "Nat + Liz 👭"
 ```
+
 
 #### 引用
 
