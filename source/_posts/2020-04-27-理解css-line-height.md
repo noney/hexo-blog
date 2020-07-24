@@ -208,7 +208,7 @@ span {
     text-align: center;
 }
 .box img {
-    vertical-align: middle;
+    vertical-align: middle; // 基线往上1/2x高度
 }
 ```
 

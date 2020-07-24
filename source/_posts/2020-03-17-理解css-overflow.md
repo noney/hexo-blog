@@ -303,8 +303,14 @@ img {
 ```html
 <div class="warp">
   <div class="con">
+    <p>中国中国中国中国中国中国中国中国中国中国</p>
+    <p>中国中国中国中国中国中国中国中国中国中国</p>
+    <p>中国中国中国中国中国中国中国中国中国中国</p>
+    <p>中国中国中国中国中国中国中国中国中国中国</p>
+    <p>中国中国中国中国中国中国中国中国中国中国</p>
   </div>
   <div class="box">
+    &nbsp;
     <ul>
       <li><a href="">1</a></li>
       <li><a href="">2</a></li>
@@ -317,28 +323,29 @@ img {
 ```css
 html, body {
   height: 100%;
-  overflow: scroll;
+  overflow: auto;
 }
 .warp {
   width: 1200px;
   margin: 0 auto;
-  height: 100%;
-}
-.con {
-  float: left;
-  width: 100%;
+  min-height: 100%;
   border: 1px solid #999;
   border-top-color: transparent;
   border-bottom-color: transparent;
-  height: 120%;
   background-color: #ccc;
 }
+.con p {
+  line-height: 30;
+}
 .box {
-  display: inline-block;
-  position: absolute;
   text-align: right;
   margin-left: 10px;
+}
+.box ul {
+  display: inline-block;
+  position: absolute;
   bottom: 30px;
+  padding-left: 10px;
 }
 .box li {
   background-color: #ccc;
