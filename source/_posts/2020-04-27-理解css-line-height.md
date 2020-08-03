@@ -165,8 +165,6 @@ span {
 }
 ```
 
-
-
 ```html
 <div class="lh">
     <img src="test.jpg" alt="">

@@ -53,6 +53,11 @@ __作者：[Noney Li]__
 
 ***总结：*** 大多数属性都不建议使用或者建议使用`css`样式设置，我们需要关注的是`cellpadding、cellspacing`这两个属性
 
+`table`特性：
+
+- 包裹性
+- 不设置宽度，不会超过`父容器`的宽度
+
 #### caption元素
 
 `caption` 元素定义表格标题
@@ -83,6 +88,12 @@ __作者：[Noney Li]__
 
 ***总结：***大多数属性兼容性都很差，我们需要关注的是`align、valign`这两个属性
 
+`tr`特性
+
+- 包裹性
+- `margin`无效
+- `width`无效，它的宽度由`td`或`table`决定
+
 #### td&th元素
 
 `td`元素定义表格中的标准单元格。内部文本`正常大小、左对齐`显示
@@ -109,6 +120,34 @@ __作者：[Noney Li]__
 | width   | pixels、%                                                  | 宽度                                                 | ~~不赞成使用。请使用样式取而代之。~~                         |
 
 ***总结：***大多数属性兼容性都很差，我们需要关注的是`align、valign、colspan、rowspan`这四个属性
+
+`td`特性
+
+- 包裹性
+- `margin`无效
+- 高度相等
+- 宽度等分（fixed）
+
+#### table&tr&td总结
+
+| table宽度 | 单元格宽度 | table-layout | 单元格表现                                    | table表现                                                | 备注                           |
+| --------- | ---------- | ------------ | --------------------------------------------- | -------------------------------------------------------- | ------------------------------ |
+| 不设置    | 不设置     | auto/fixed   | 内容宽度                                      | 所有单元格宽度之和（内容宽度）                           | 不会超出`table父容器`宽度      |
+| 设置      | 不设置     | auto         | 内容宽度                                      | 设置的`table`宽度                                        | 内容多时，没有空白，单元格变高 |
+| 设置      | 不设置     | fixed        | 宽度均分                                      | 设置的`table`宽度                                        |                                |
+| 设置      | 设置       | auto         | 内容宽度+空白                                 | 设置的`table`宽度                                        | 宽度均分                       |
+| 设置      | 设置       | fixed        | table大，宽度均分；单元格大，单元格设置的宽度 | table大，设置的`table`宽度；单元格大，所有单元格宽度之和 |                                |
+| 不设置    | 设置       | auto/fixed   | 设置的单元格宽度                              | 所有单元格宽度之和                                       | 单元格相等                     |
+
+***结论：***
+
+- `fixed`时，单元格宽度相等（除了都不设置宽度），所有`单元格`宽度之和与`table`宽度比较，取大者。`table`宽度大时，`单元格`均分；反之`table`的宽度为所有`单元格`宽度之和（此规则均以`css`设置的宽度为准）
+- `auto`时，单元格宽度等于`内容宽度+剩余空间`（除了最后一条），如果内容过多，`剩余空间`将不存在，并且单元格增加高度（此规则均以`内容`的宽度为准）
+- 都不设置宽度时，`table`内容不会超出父容器
+
+#### vertical-align
+
+`vertical-align`属性可以用来设置元素的垂直对齐方式。它也能应用于`td、th`元素
 
 #### 合并边框
 
@@ -143,7 +182,7 @@ table td {
 
 表格布局算法使用`css table-layout`属性
 
-- automatic 默认值，列宽度由单元格`内容`设定（`max-width、min-width`有效）
+- auto 默认值，列宽度由单元格`内容`设定（`max-width、min-width`有效）
 - fixed 列宽由表格宽度和列宽度设定（所有`td`宽度之和与`table`宽度两者取最大值，`max-width、min-width`无效）
 - inherit 从父元素继成`任何的版本的 Internet Explorer （包括 IE8）都不支持属性值 "inherit"`
 
@@ -265,3 +304,4 @@ table td {
 [HTML td 标签](https://www.w3school.com.cn/tags/tag_td.asp)
 [HTML th 标签](https://www.w3school.com.cn/tags/tag_th.asp)
 [【CSS】Table样式](https://www.cnblogs.com/peterYong/p/10761757.html)
+[display: table-cell知识点总结](https://www.jianshu.com/p/52b0c2a7ea29)
