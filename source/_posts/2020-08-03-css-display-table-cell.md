@@ -184,4 +184,4 @@ td {
 #### 参考
 
 [display: table-cell知识点总结](https://www.jianshu.com/p/52b0c2a7ea29)
-[html元素-table]([http://0kv30q.coding-pages.com/2020/07/28/html%E5%85%83%E7%B4%A0-table/](http://0kv30q.coding-pages.com/2020/07/28/html元素-table/))
+[html元素-table](http://0kv30q.coding-pages.com/2020/07/28/html元素-table/)
