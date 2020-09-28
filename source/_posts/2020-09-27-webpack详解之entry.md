@@ -17,9 +17,23 @@ __作者：[Noney Li]__
 
 `entry`用来配置`webpack`入口。`webpack`从入口开始构建，入口可以有多个
 
-***单个入口***
+#### context
 
-- 主入口只有一个文件
+`context`用于指定`入口`和`loader`的上下文，是一个绝对路径，默认是`当前目录`
+
+```javascript
+{
+  context: `${__dirname}/src`
+}
+```
+
+#### entry
+
+`entry`用于指定应该程序入口
+
+<!-- more -->
+
+- 入口是一个文件
 
 ```javascript
 const entry = {
@@ -32,9 +46,7 @@ module.exports = {
 }
 ```
 
-<!-- more -->
-
-- 主入口由多个文件组成
+- 入口是一个数组
 
 ```javascript
 // 传入文件路径数组时，将创建多个主入口，它们将导出到一个chunk
@@ -61,7 +73,7 @@ module.exports = {
 }
 ```
 
-***总结：***单入口方式主要应用于`单页面应用`，缺点是缺乏灵活性
+***总结：***单入口方式主要应用于`单页面应用`，`chunk`会被命名为`main`。缺点是缺乏灵活性
 
 ***多个入口***
 
@@ -76,8 +88,10 @@ module.exports = {
 }
 ```
 
-***总结：***多个入品方式主要用于`多页面应用`，可以使用`CommonsChunkPlugin`提取多个页面共享代码到一个`bundle`
+***总结：***多个入品方式主要用于`多页面应用`，`chunk`的名字为每个`key`的名字。可以使用`CommonsChunkPlugin`提取多个页面共享代码到一个`bundle`
 
 #### 参考
 
 [入口起点](https://www.webpackjs.com/concepts/entry-points/)
+
+[入口和上下文](https://www.webpackjs.com/configuration/entry-context/)
