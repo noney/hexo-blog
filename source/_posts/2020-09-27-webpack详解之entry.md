@@ -17,21 +17,9 @@ __作者：[Noney Li]__
 
 `entry`用来配置`webpack`入口。`webpack`从入口开始构建，入口可以有多个
 
-#### context
-
-`context`用于指定`入口`和`loader`的上下文，是一个绝对路径，默认是`当前目录`
-
-```javascript
-{
-  context: `${__dirname}/src`
-}
-```
-
 #### entry
 
 `entry`用于指定应该程序入口
-
-<!-- more -->
 
 - 入口是一个文件
 
@@ -45,6 +33,8 @@ module.exports = {
   entry
 }
 ```
+
+<!-- more -->
 
 - 入口是一个数组
 
