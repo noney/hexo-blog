@@ -42,11 +42,12 @@ module.exports = {
 
 #### 常用插件
 
-| 名称               | 文档链接 |
-| ------------------ | -------- |
-| bannerPlugin       |          |
-| CommonsChunkPlugin |          |
-|                    |          |
+| 插件                                                         | 描述                                   |
+| ------------------------------------------------------------ | -------------------------------------- |
+| [bannerPlugin](http://0kv30q.coding-pages.com/2020/10/13/webpack%E5%B8%B8%E7%94%A8%E6%8F%92%E4%BB%B6%E4%B9%8BbannerPlugin/) | 在每个`chunk`顶部添加一个`banner`标识  |
+| [CommonsChunkPlugin](http://0kv30q.coding-pages.com/2020/10/13/webpack%E5%B8%B8%E7%94%A8%E6%8F%92%E4%BB%B6%E4%B9%8BCommonsChunkPlugin/) | 提取`多个入口`共享的公用模块           |
+| [CompressionWebpackPlugin](http://0kv30q.coding-pages.com/2020/10/15/webpack常用插件之CompressionWebpackPlugin/) | 为`Content-Encoding`提供压缩版本       |
+| ContextReplacementPlugin                                     | 替换解析`使用表达式方式引用模块`的规则 |
 
 #### 参考
 
