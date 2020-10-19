@@ -104,14 +104,14 @@ new webpack.ContextReplacementPlugin(/src[\/\\]json/, /^\.\/1.json$/, true)
 new webpack.ContextReplacementPlugin(/src[\/\\]json/, '', true, /^\.\/1.json$/)
 ```
 
-输出结果（输出入长，截取部分）：
+输出结果（输出太长，截取部分）：
 
 ```shell
 ./src/json/1.json 19 bytes [optional] [built] [code generated]
 context element ./1.json ./src/json/ sync ^\.\/1.json$ ./1.json
 ```
 
-我们可以看到，只有`1.json`被引入到了`index.js`文件
+我们可以看到，只有`1.json`被构建到了`bundle`文中
 
 #### 内容回调
 
