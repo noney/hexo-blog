@@ -53,8 +53,8 @@ console.log(wa, wb, wc, wd, wd.d, wf, wf[0], wg, typeof window); // 1, b, (() =>
 
 ***注意：***
 
-- 我们需要使用`process.env.NODE_ENV`去覆盖`NODE_ENV`，定义`process`、`process.env`会覆盖整个进行对象
-- 由于插件将直接替换为文本，所以值必须包含字符串本身内部的引号。如`'"production"'`或`JSON.stringify('production')`
+- 我们需要使用`process.env.NODE_ENV`去覆盖`NODE_ENV`，定义`process`、`process.env`会覆盖整个进程对象
+- 由于插值将直接替换为文本，所以值必须包含字符串本身内部的引号。如`'"production"'`或`JSON.stringify('production')`
 
 ```javascript
 new webpack.DefinePlugin({
