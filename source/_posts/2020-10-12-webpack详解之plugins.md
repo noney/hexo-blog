@@ -50,8 +50,8 @@ module.exports = {
 | [ContextReplacementPlugin](http://0kv30q.coding-pages.com/2020/10/15/webpack%E5%B8%B8%E7%94%A8%E6%8F%92%E4%BB%B6%E4%B9%8BContextReplacementPlugin/) | 替换解析`使用表达式方式引用模块`的规则           |
 | [CopyWebpackPlugin](http://0kv30q.coding-pages.com/2020/10/19/webpack%E5%B8%B8%E7%94%A8%E6%8F%92%E4%BB%B6%E4%B9%8BCopyWebpackPlugin/) | 将已经存在的`单个文件`或`整个目录`复制到构建目录 |
 | [DefinePlugin](http://0kv30q.coding-pages.com/2020/10/19/webpack%E5%B8%B8%E7%94%A8%E6%8F%92%E4%BB%B6%E4%B9%8BDefinePlugin/) | 创建可在编译时配置的全局常量                     |
-| DllPlugin                                                    | 分割`bundle`，提高构建性能                       |
-|                                                              |                                                  |
+| [DllPlugin](http://0kv30q.coding-pages.com/2020/10/19/webpack%E5%B8%B8%E7%94%A8%E6%8F%92%E4%BB%B6%E4%B9%8BDllPlugin/) | 分割`bundle`，提高构建性能                       |
+| EnvironmentPlugin                                            | `DefinePlugin`设置`process.env`键的简写          |
 |                                                              |                                                  |
 
 #### 参考
