@@ -15,7 +15,7 @@ __作者：[Noney Li]__
 
 #### 写在前面
 
-`EnvironmentPlugin`是使用`DefinePlugin`设置`process.env`键的简写形式，它接收一个`键数组`或`对象`（键与默认值的映射）
+`EnvironmentPlugin`是使用`DefinePlugin`设置`process.env`键的快捷方式，它接收一个`键数组`或`对象`（键与默认值的映射）
 
 ```javascript
 // 键数组
